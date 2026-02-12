@@ -1,0 +1,326 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  --primary-color: #ffc5d0; 
+  --secondary-color: #fdd4db; 
+  --accent-color: #ff6d88; 
+  --text-color: hsl(343, 100%, 71%); 
+  --bg-color: #fff0f3; 
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: repeating-linear-gradient(
+    90deg,
+    #ffd6e0,
+    #ffd6e0 40px,
+    #ffc1d1 40px,
+    #ffc1d1 80px
+  );
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+@keyframes bounceInText {
+  0% { transform: scale(0.3) translateY(20px); opacity: 0; }
+  50% { transform: scale(1.05) translateY(-10px); opacity: 1; }
+  70% { transform: scale(0.9) translateY(5px); }
+  100% { transform: scale(1) translateY(0); }
+}
+
+.bounce-text {
+  display: inline-block;
+  animation: bounceInText 1.5s ease-in-out forwards;
+}
+
+header {
+  background: var(--white);
+  border-bottom: 8px scalloped var(--primary-color);
+  padding: 1.5rem 5%;
+  border-radius: 0 0 25px 25px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(255, 77, 109, 0.2);
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primary-color);
+}
+
+.business-name {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 0px var(--secondary-color);
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+nav a:hover {
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.hero {
+  height: 80vh;
+  background: linear-gradient(
+      rgba(255,192,203,0.7),
+      rgba(255,182,193,0.7)
+    ),
+    url('https://i.pinimg.com/originals/90/9e/25/909e25893881b145777c4c02b69a788a.gif');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--white);
+  padding: 0 20px;
+  border-radius: 0 0 50px 50px;
+  box-shadow: 0 8px 30px rgba(255,105,135,0.4);
+}
+
+.hero h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 3px 3px 8px rgba(0,0,0,0.3);
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  background-color: rgba(255, 77, 109, 0.8);
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.cta-button {
+  background-color: var(--accent-color);
+  color: var(--white);
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 20px rgba(255,105,135,0.6);
+}
+
+.cta-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px var(--accent-color);
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; 
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  background-color: var(--white);   
+  padding: 15px;                    
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.carousel-item img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;   
+  display: block;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.welcome-msg {
+  padding: 3rem 10%;
+  max-width: 900px;
+  margin: 0 auto 3rem auto;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-color);
+  background: var(--white);
+  border-radius: 30px;
+  box-shadow: 0 8px 25px rgba(255,105,135,0.2);
+}
+
+.featured-video {
+  padding: 4rem 10%;
+  text-align: center;
+  background-color: var(--white);
+  border-radius: 30px;
+  max-width: 900px;
+  margin: 0 auto 3rem auto;
+  box-shadow: 0 8px 25px rgba(255,105,135,0.2);
+}
+
+.section-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.section-title::before,
+.section-title::after {
+  content: "✿";
+  margin: 0 15px;
+  color: #ffb6c1;
+  font-size: 2rem;
+  position: relative;
+  top: 6px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.featured-video p {
+  margin-top: 1rem;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+footer {
+  background: var(--accent-color);
+  border-top: 10px dashed var(--white);
+  color: var(--white);
+  padding: 3rem 10%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 25px 25px 0 0;
+  box-shadow: 0 -6px 15px rgba(255,105,135,0.5);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin: 1rem;
+}
+
+.footer-section h3 {
+  font-family: 'Pacifico', cursive;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+
+@media (max-width: 768px) {
+  .carousel-item {
+    width: 160px;
+  }
+  nav ul {
+    gap: 1rem;
+  }
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

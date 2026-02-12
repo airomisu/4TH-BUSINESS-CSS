@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tangy Delights - Contact</title>
+<link rel="stylesheet" href="style.css">
+    <style>
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4rem 10%;
+    gap: 4rem;
+}
+
+.contact-info {
+    flex: 1;
+    padding: 3rem;
+    border-radius: 20px;
+    background-color: #fff; 
+}
+
+.contact-form-wrapper {
+    flex: 1.5;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    background-color: #fff; 
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+</style>
+
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <img src="https://i.pinimg.com/736x/5b/66/12/5b66120fb37cb9cb870f780ee15bd0e3.jpg" alt="Tangy Delights Logo" class="logo-img">
+            <div class="business-name">TANGY DELIGHTS</div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>We'd love to hear from you! Whether you have a question about our flavors, pricing, or just want to say hi.</p>
+            
+            <div style="margin-top: 2rem;">
+                <p><strong>📍 Address:</strong> 123 Sweet Street, Candy Town</p>
+                <p><strong>📧 Email:</strong> airoshelbydriz@gmail.com</p>
+                <p><strong>📞 Phone:</strong> (123) 456-7890</p>
+            </div>
+
+            <div style="margin-top: 2rem;">
+                <h3>Business Hours</h3>
+                <p>Mon - Fri: 10:00 AM - 8:00 PM</p>
+                <p>Sat - Sun: 11:00 AM - 9:00 PM</p>
+            </div>
+
+            <div style="margin-top: 2rem;">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">FB</a>
+                    <a href="#" class="social-icon">IG</a>
+                    <a href="#" class="social-icon">TT</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form-wrapper">
+            <h2>Send us a Message</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="What is this about?">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                </div>
+                <button type="submit" class="cta-button" style="width: 100%;">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Tangy Delights</h3>
+                <p>Bringing sweetness to your life.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: airoshelbydriz@gmail.com</p>
+                <p>Grade & Section: STE 9 - Justice</p>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Tangy Delights. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
+
